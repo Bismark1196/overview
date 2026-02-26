@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overview</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+/* ===== STATUS BAR ===== */
+.status-bar{
+    background:#c40000;
+    color:white;
+    padding:6px 12px;
+    font-size:13px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.status-icons i{
+    margin-left:8px;
+}
+
+/* ===== HEADER ===== */
+.header{
+    background:#d50000;
+    color:white;
+    padding:18px 16px 22px 16px;
+}
+
+.header-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header h2{
+    font-size:20px;
+    font-weight:600;
+}
+
+.header small{
+    display:block;
+    margin-top:6px;
+    font-size:14px;
+}
+
+.limit{
+    font-size:14px;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    padding:15px;
+}
+
+/* ===== CARD ===== */
+.card{
+    background:white;
+    border-radius:0px;
+    margin-bottom:15px;
+    border:1px solid #e5e5e5;
+    overflow:hidden;
+}
+
+.card-header{
+    padding:8px 12px;
+    font-weight:600;
+    color:#008186;
+    background:#fafafa;
+}
+
+.card-body{
+    padding:15px;
+}
+
+/* ===== BALANCE GRID ===== */
+.balance-grid{
+    display:flex;
+}
+
+.balance-grid div{
+    flex:1;
+    padding:0px;
+}
+
+.balance-grid div:first-child{
+    border-right:1px solid #eee;
+}
+
+.balance-title{
+    font-size:14px;
+    color:#008186;
+}
+
+.balance-amount{
+    font-size:20px;
+    font-weight:700;
+    margin-top:10px;
+}
+.balance-title.right{
+    font-size:14px;
+    color:#008186;
+    margin-left: 55px;
+}
+.balance-amount.right{
+    font-size:20px;
+    font-weight:700;
+    margin-top:10px;
+    margin-left: 90px;
+}
+
+/* ===== PAYMENT GRID ===== */
+.payment-grid{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+}
+
+.payment-left{
+    flex:0;
+}
+
+.payment-right{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    text-align:right;
+    margin-left: 150px;
+}
+
+/* ===== SUCCESS BOX ===== */
+.success-box{
+    padding:12px;
+    font-size:14px;
+    background:#f8fff9;
+}
+
+.success-box i{
+    color:#2e7d32;
+    margin-right:6px;
+}
+
+.note{
+    font-size:12px;
+    color:#777;
+    margin-top:8px;
+}
+
+/* ===== TRANSACTIONS ===== */
+.transaction{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 15px;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+.transaction:last-child{
+    border-bottom:none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:500px){
+    .payment-grid{
+        flex-direction:column;
+        gap:12px;
+    }
+    .payment-right{
+        align-items:flex-start;
+        text-align:left;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+    <div>10:05</div>
+    <div class="status-icons">
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-tiktok"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-solid fa-battery-three-quarters"></i>
+    </div>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="header-top">
+        <div>
+            <h2>Overview</h2>
+            <small>Ending Balance: $89,896</small>
+        </div>
+        <div>
+            <span class="limit">Limit: 5000 $</span>
+            <i class="fa-solid fa-gear" style="margin-left:10px;"></i>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- CURRENT BALANCE -->
+    <div class="card">
+        <div class="card-body">
+            <div class="balance-grid">
+                <div>
+                    <div class="balance-title"><strong>Current Balance</strong></div>
+                    <div class="balance-amount">$89,896</div>
+                </div>
+                <div>
+                    <div class="balance-title right"><strong>Upper Threshold</strong></div>
+                    <div class="balance-amount right">$14,999</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAKE PAYMENT -->
+    <div class="card">
+        <div class="card-header">Make Payment</div>
+        <div class="card-body">
+            <div class="payment-grid">
+                
+                <div class="payment-left">
+                    <p><strong>Payment due by</strong></p>
+                    <p>21 December 2025</p>
+
+                    <p style="margin-top:12px;"><strong>Minimum Amount</strong></p>
+                    <p>$1,500</p>
+                </div>
+
+                <div class="payment-right">
+                    <p><strong>Last Statement Balance</strong></p>
+                    <p style="margin-right:100px;">$2,900</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- LAST PAYMENT -->
+    <div class="card">
+        <div class="card-header">Last Payment</div>
+        <div class="card-body">
+            <div class="success-box">
+                <i class="fa-solid fa-check-circle"></i>
+                Your Last Payment of $2,900 Migratedwallet of narration number RM007868647786 
+                to safaricom number Mpesa 254725****65 made on 26 February 2026 was accepted.
+                
+                <div class="note">
+                    Recently made payments might take 1 working day to appear here
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RECENT TRANSACTIONS -->
+    <div class="card">
+        <div class="card-header">Recent Transactions</div>
+
+        <div class="transaction">
+            <span>Richard Rono</span>
+            <strong>$2,900</strong>
+        </div> 
+
+        <div class="transaction">
+            <span>Richard Rono</span>
+            <strong>$3,200</strong>
+        </div>
+
+        <div class="transaction">
+            <span>Richard Rono</span>
+            <strong>$3,000</strong>
+        </div>
+
+        <div class="transaction">
+            <span>Squicc Nobel</span>
+            <strong>$5,700</strong>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
